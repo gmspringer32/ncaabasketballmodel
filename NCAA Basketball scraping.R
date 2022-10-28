@@ -55,9 +55,6 @@ read_data <- function(url, year){
   
   names(df) <- toupper(names(df))
   
-  df %>% 
-    dplyr::rename('EFG_O' = `EFG%`, 'EFG_D' = `EFGD%`, '2P_O' = `2P%`, '2P_D' = `2P%D`,
-                  '3P_O' = `3P%`, '3P_D' = `3P%D`, 'ADJ_T' = `ADJ T.`)
   
   df <- df %>% 
     mutate(YEAR = year)
